@@ -1,5 +1,7 @@
 # Front End Develop Class
 
+codesandbox 원본 주소 : https://codesandbox.io/s/class06-3qikei
+
 - md 파일 문법
 
 ```
@@ -11,3 +13,4 @@
 ```~``` : 코드블럭(backtick)
 
 ```
+
