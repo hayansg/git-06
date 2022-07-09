@@ -10,8 +10,8 @@
     - 추가 문법
 
 - 활용
-  - HTML/CSS/Js 종합 활용
   - HTML DOM
+  - HTML/CSS/Js 종합 활용
   - Open API - 객체
 
 ## JS basic
@@ -246,4 +246,75 @@ let arr = [1,2,3,4,'a'] X
 
 ### 추가 문법
 
+### 변수 Scope
+
+- Scope
+  - Global Scope
+    - 변수는 모든 범위에서 접근 가능
+  - Function Scope
+    - 해당 함수 범위에서만 접근 가능
+  - Block Scope
+    - 해당 블록 범위에서만 접근 가능
+
+```
+<script>
+// Global Scope
+let a = 1;
+var _a = 1;
+
+function myFunction(){
+  // function scope
+  let b = 2;
+  var _b = 2;
+
+  for(statement){
+    //block scope(1)
+    let c = 3;
+    var _a=c = 3;
+  }
+}
+
+if(condition){
+  // block scop(2)
+  let d = 4;
+  var _d = 4;
+}
+
+</script>
+
+
+```
 ## JS 활용
+
+- 데이터 입출력
+- UI 효과
+
+### HTML DOM
+
+- DOM(Document Object Model) : HTML Element들을 객체화 시킨 모델
+- HTML DOM을사용하여 HTML Element를 제어
+
+### DOM 접근 API
+
+- DOM API : DOM 객체 매소드
+
+```
+HTML4
+document.getElementById('id') : id로 DOM 접근
+document.getElementsByClassName('class') : class로 DOM 접근
+document.getElementsTagName('tagname') : tag로 DOM 접근
+
+jQuery
+$('#id')
+$('.class')
+$('tag')
+
+HTML5
+document.querySelector('#id')
+document.querySelector('.class')
+document.querySelector('tag')
+
+document.querySelectorALL('.class')
+document.querySelectorALL('tag')
+```
+

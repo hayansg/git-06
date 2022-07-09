@@ -252,3 +252,83 @@ root(/) - [html1] - home.html
   - b(old) : 두꺼운 글자로 표현
 
 # CSS
+
+- content styling
+  - text styling
+  - media styling
+
+- layout(structure styling)
+  - 가로배치(flexbox)
+
+## CSS Basic
+
+- CSS : Cascading Style Sheet
+
+```
+h1 {color:blue;front-size:20px;}
+
+h1{
+  color:blue;
+  front-size:20px;
+}
+```
+
+## Selector(선택자)
+
+- 선택자로 HTML 요소를 선택
+- HTML 요소 선택 방법
+  - Simple Selector(단순 선택자)
+    - Tag/Element 이름 사용
+    - Class 이름 사용
+    - id 이름 사용
+
+```
+<a href="https://www.naver.com">네이버</a>
+<a href="https://www.daum.net">다음</a>
+
+/* a 태그 2개모두 red 적용 */
+a{
+  color:red;
+}
+
+/* 태그 각각 다른 color 적용 */
+.naver {
+  color:blue;
+}
+#daum {
+  color:green;
+}
+```
+
+### id, class 이름의 특징
+
+- id
+  - 같은 HTML 페이지에서 고유(유일)해야 함
+    - 프로그래밍 언어의 변수와 연결 가능성이 있음
+  - HTML 요소에 여러 개의 id 이름 사용 불가능
+
+- clas
+  - 같은 HTML 페이지에서 여러번 사용가능 함
+  - HTML 요소에 여러 개의 id 이름 사용 가능
+
+```
+<P class="paragraph">단락1</P>
+<p class="paragraph">단락2</p> (O)
+<p id="content">단락3</p>
+<p id="content">단락4</p> (X)
+
+<p class="gnb-list-item>회사소개</p>
+```
+
+### CSS 선택자 우선순위
+
+- cascading 규칙
+- 동일한 대상에 여러 스타일이 적용할 때 제일 마지막에 적용된 스타일에 반영
+
+- 선택자 우선순위
+  - 선택자 종류에 따라 css 적용 우선순위가 다르게 정의
+  - cascading 규칙에 따르지 않고 CSS를 적용할 때 사용
+  - inline : 1000
+  - id: 100
+  - class : 10
+  - tag : 1
