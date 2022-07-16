@@ -307,7 +307,7 @@ a{
     - 프로그래밍 언어의 변수와 연결 가능성이 있음
   - HTML 요소에 여러 개의 id 이름 사용 불가능
 
-- clas
+- class
   - 같은 HTML 페이지에서 여러번 사용가능 함
   - HTML 요소에 여러 개의 id 이름 사용 가능
 
@@ -332,3 +332,87 @@ a{
   - id: 100
   - class : 10
   - tag : 1
+
+ ### Text Styling
+
+ #### Color
+ ```
+ h1(
+   color:blue;
+ )
+```
+p(
+  text-align:center;
+)
+
+- 정렬 값 : left, center, right, justify(양쪽맞춤)
+
+- 단어 중간에 줄바꿈
+```
+p{
+  word-break:break-all;
+}
+```
+
+#### Text-decoration
+```
+h1(
+  text-decoration:underline;
+)
+h1(
+  text-decoration:line-through;
+)
+h1(
+  text-decoration:overline;
+)
+a{
+  text-decoration:none;
+}
+```
+
+#### Text Spacing
+
+```
+p{
+  text-indent:16px;
+}
+
+h2{
+  letter-spacing:5px;
+}
+
+p{
+  world-spacing:3px;
+}
+
+p{
+  white-space:nowrap;
+}
+```
+
+- line-height
+  - 텍스트 줄을 포함한 줄 높이
+  - 배수 : 소수점을 포함한 숫자 가능, 폰트 크기를 기준
+
+** 조상요소나 부모요소에 CSS의 속성을 적용했을 때, 자식요소에 상속되는 속셈이 있음
+
+### Font Family
+
+- CSS파일이 브라우저에렌더링되기때문에 폰트 파일을 클라이언트PC에서찾음
+  - 다수의 클라이언트 PC에 설치될 만한 폰트를 선택(Web safe)
+- font-family 속서에 값으로 정해준 폰트 종류를 차례대로 찾음(Fallback)
+
+- 서버에서 폰트를 사용할 수 있게 하는 기능
+  - Web Font
+
+- 구글 폰트
+
+- 폰트 종류(저작권)
+  - 폰트 파일 포함 여부
+
+#### Font size
+
+- font-size
+- 폰트 크기
+- px
+
