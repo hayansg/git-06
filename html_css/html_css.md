@@ -416,3 +416,153 @@ p{
 - 폰트 크기
 - px
 
+#### Font Style
+
+- font-style
+- 기울임꼴 설정
+- italic 값
+
+#### Font weight
+
+- font- weight
+- 굵기
+- normal/bold
+- 단위없는 100단위 숫자 값 사용
+
+#### Link Style
+
+- a 태그가 4가지 상태를 구분함
+- link, visted, hover, active
+
+```
+<a href="https://www.naver.com" class="link">naver</a>
+
+a:link{}
+.link:visted{}
+a:hover{}
+a:active{}
+```
+
+### Media Countents styling
+
+- Image, Video
+  - Box Model 적용
+  - 위치 지정
+
+### Layout Styling
+
+- Element 영역
+  - Block, Inline, Element
+- Element 영역 Styling
+  - Box Model
+- Element 배치
+  - 배치 지정
+    - 인접해있는 박스들의 관계
+    - 인접해있는 박스들 사이에 영향
+  - 위치 지정
+    - 박스의 위치를 단독으로 지정
+
+#### Box Model
+
+- Box Model 구성요소
+  - content(width/height), padding, border, margin
+
+- inline 요소에 box model 적용
+
+
+##### width/height(block 요소)
+  - block 요소 
+    - width는 부모요소에 채워짐
+    - heigh는 contents 또는 자식요소에 맞춰짐
+  - px
+    - 수지 값으로 크기 조정
+  - %
+    - 부모 요소를 기준으로일정 비율 크기만큼 지정
+    - height는 적용이 되지 않음
+- auto
+    - width/height 자동으로 크기 지정
+    - width/height의 원래 특성으로 적용
+
+##### padding
+
+- 안쪽 여백
+
+```
+padding-top
+padding-right
+padding-bottom
+padding-left
+(** 방향 순서 : top을 기준으로 시계방향 순서)
+
+padding:10px 20px 30px 40px;
+
+padding:10px 20px 30px;(2번째값:좌우 공통적용)
+
+padding:10px 20px;(1번째값:위아래 공통적용, 2번째:좌우공통적용)
+
+padding:10px; => 4방향 공통 적용
+```
+
+##### margin
+
+- margin 사용 방법은 padding 동일함
+
+- margin collapse(겹침/상쇄)
+  - 위아래에 인접한 박스의 margin이 상쇄되는 현상
+  - 두 여백 중 큰 쪽 여백만 적용
+  - 좌우로 인접한 박스는 양쪽의 margin 적용
+
+##### border
+
+- 굵기, 모양, 색
+
+```
+border:1px solid red;
+
+border-top:1px solid red;
+border-right
+border-bottom
+border-left
+```
+
+##### background
+
+- 배경색, 배경 이미지 배경 적용
+
+```
+background-color:red;
+
+background-image:url(이미지파일);
+```
+
+- background-repeat
+  - repeat(default), repeat-x, repeat-y, no-repeat
+
+- background-position
+  - px
+  - left, center, right
+  - top, center, bottom
+  - 배경이미지의 위치 지정은 이미지 반복이 안될 때 적용
+
+- background-attachment
+  - 배경 이미지 고정
+  - fixed
+
+#### display
+
+- 박스의 표시 속성을 변경해서 표시
+
+```
+display:inline; /* block 요소가 inline요소의 특성으로 화면에 표시 */
+display:block; /* block 요소가 block요소의 특성으로 화면에 표시 */
+display:inline-block; /* inline과 block의 특성을 모두 표시 : 나란히 표시, 박스모델 */
+```
+
+### layout 배치
+
+- float
+- flex
+- grid
+
+#### flexbox
+

@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>데이터 입출력</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-  <script src="main.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>데이터 입출력</title>
+
 </head>
 <body>
   <h1>데이터 입출력</h1>
+
     <ul class="list">
       <li class="list-item">HTML</li>
       <li class="list-item">CSS</li>
     </ul>
+    <div>
+      <input type="text" class="input-create">
+      <button type="button" class="create">Create</button>
+    </div>
 
-    <button type="button" class="create">Create</button>
-    <button type="button" class="read">Read</button>
-    <button type="button" class="update">Update</button>
-    <button type="button" class="delete">Delete</button>
+    <div>
+      <input type="text" class="input-read">
+      <button type="text" class="read">Read</button>
+    </div>
 
+    <div>
+        <input type="text" class="input-update">
+        <button type="text" class="update">Update</button>
+      </div>
+
+      <div>
+          <input type="text" class="input-delete">
+          <button type="text" class="delete">Delete</button>
+        </div>
+
+  
     <script>
     // create
     let createBtn = document.querySelector('.create');
@@ -28,10 +43,14 @@
       let list = document.querySelector('.list');
 
       // 추가할 태그 생성
-      document.createElement('li');
+      let list = document.createElement('li');
 
       // 태그에 class 추가
       listItem.classList.add('list-item');
+
+      // input 접근/가져오기
+      let inputCreate = doucument.querySelector('.input-create');
+      inputCreate.innerHTML = 'test';
 
       // 태그에 Text 내용 추가
       listItem.innerHTML = 'Javascript';
@@ -44,26 +63,36 @@
     // Read
     let readBtn = document.querySelector('.read');
     readBtn.addEventListener('click', function(){
-      let listItem = document.querySelectorAll('list-item');
-      let print = document.querySelector('.print');
+      let listItem = document.querySelectorAll('.list-item');
+      let print = document.querySelector('.Input-read');
 
       print.innerHTML = '';
 
       for(let i=0;i<listItem.length;i++){
-        print.innerHTML += listItem[i].innerHTML;
+        print.innerHTML += listItem[i].innerHTML + ' ';
       }
-      )};
+      });
 
       // update
       let updateBtn = document.querySelector('.update');
       updateBtn.addEventListener('click', function(){
       
+        let listItem = document.querySelectorAll('.list-item');
+        
+        listItem[0].innerHTML = 'HTML5';
+
       });
 
       // Delete
-      let deleteBtn = document.querySelector
-    
+      let deleteBtn = document.querySelector('.delete');
+      deleteBtn.addEventListener('click', function(){
 
+        let list = document.querySelector('.list');
+        let listItem = document.querySelectorAll('.list-item');
+
+        list.removeChild(listItem[1]);
+
+      });
 
     </script>
 </body>
